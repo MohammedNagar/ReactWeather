@@ -1,9 +1,23 @@
+var webpack = require('webpack');
+
 module.exports= {
-  entry:[ 'babel-polyfill','./app/app.jsx'],
+  entry:[ 'babel-polyfill',
+  'script-loader!jquery/dist/jquery.min.js',
+  'script-loader!foundation-sites/dist/js/foundation.min.js',
+  './app/app.jsx'],
   output: {
     path: __dirname,
     filename:'./public/bundle.js'
   },
+  externals: {
+    jquery:'jQuery'
+  },
+  plugins :[
+    new webpack.ProvidePlugin({
+      '$':'jquery',
+      'jQuery':'jquery'
+    })
+  ],
   resolve: {
     modules: [__dirname, 'node_modules'],
     alias:{
@@ -16,7 +30,7 @@ module.exports= {
       WeatherMessage:'app/components/WeatherMessage.jsx',
       openWeatherMap:'app/api/openWeatherMap.jsx'
     },
-    extensions: ['*','.js','.jsx']
+    extensions: ['*','.js','.jsx;']
   },
   module :{
     rules:[{
