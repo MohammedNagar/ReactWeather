@@ -11,14 +11,15 @@ var Main  = (props)=> {
     <HashRouter>
       <div>
        <Nav/>
+       <div className="columns medium-6 large-4 small-centered">
        <Switch>
           <Route path='/about' component={About}/>
           <Route path='/examples' component={Examples}/>
           <Route component={Weather}/>
        </Switch>
+     </div>
       </div>
     </HashRouter>
-    
     </div>
   );
 
