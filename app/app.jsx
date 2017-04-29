@@ -12,14 +12,19 @@ var Examples = require('Examples');
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
+// ReactDOM.render(
+//   <BrowserRouter>
+//    <div>
+//        <Route path='/' component={Main} />
+//        <Route path='/Weather' component={Weather}/>
+//        <Route path='/about' component={About}/>
+//        <Route path='/examples' component={Examples}/>
+//    </div>
+//   </BrowserRouter>,
+//   document.getElementById('app')
+// );
+
 ReactDOM.render(
-  <BrowserRouter>
-   <div>
-       <Route path='/' component={Main} />
-       <Route path='/Weather' component={Weather}/>
-       <Route path='/about' component={About}/>
-       <Route path='/examples' component={Examples}/>
-   </div>
-  </BrowserRouter>,
-  document.getElementById('app')
+      <Main/>,
+      document.getElementById('app')
 );
