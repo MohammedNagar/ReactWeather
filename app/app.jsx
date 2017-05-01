@@ -14,7 +14,7 @@ $(document).foundation();
 
 //app style
 
-require('style-loader!css-loader!applicationStyles');
+require('style-loader!css-loader!sass-loader!applicationStyles');
 
 // ReactDOM.render(
 //   <BrowserRouter>
