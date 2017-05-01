@@ -12,6 +12,10 @@ var Examples = require('Examples');
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
+//app style
+
+require('style-loader!css-loader!applicationStyles');
+
 // ReactDOM.render(
 //   <BrowserRouter>
 //    <div>
