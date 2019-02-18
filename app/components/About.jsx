@@ -6,7 +6,7 @@ var About =(props)=>{
     <div>
         <h1 className="text-center page-title">About</h1>
         <p>This is a wearther application  build on react.
-           I have built this for the complete react web app developer course.  </p>
+           I have built this for the complete react web app developer course.!!!  </p>
          <p>
            Here are some of the tools i have used:
          </p>
